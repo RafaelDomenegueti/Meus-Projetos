@@ -1,0 +1,73 @@
+#game{
+    position: fixed;
+    background-color: #44475a;
+    width: 550px;
+    height: 350px;
+    top: 25%;
+    left: 50%;
+    margin-left: -275px;
+    display: none;
+    border-radius: 10px;
+}
+#closegame{
+    position: absolute;
+    width: 30px;
+    left: 100%;
+    margin-left: -30px;
+    border-radius: 10px;
+}
+#arena{
+    position: absolute;
+    background-color: #b6bbc2;
+    width: 330px;
+    height: 330px;
+    top: 10px;
+    left: 10px;
+}
+#score{
+    position: absolute;
+    background-color: #b6bbc2;
+    width: 180px;
+    height: 180px;
+    left: 100%;
+    top: 100%;
+    margin-top: -190px;
+    margin-left: -190px;
+}
+#scorepoint{
+    position: absolute;
+    color: darkslateblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23pt;
+    left: 8px;
+}
+#player1{
+    background-color: blue;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+#começar{
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    top: 30%;
+    left: 100%;
+    margin-left: -190px;
+}
+#parar{
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    top: 30%;
+    left: 100%;
+    margin-left: -190px;
+    display: none;
+}
+#point{
+    position: absolute;
+    background-color: chocolate;
+    width: 30px;
+    height: 30px;
+    display: none;
+}

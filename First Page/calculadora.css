@@ -1,0 +1,71 @@
+#calculadora{
+    position: fixed;
+    background-color: #44475a;
+    width: 250px;
+    height: 350px;
+    top: 30%;
+    left: 50%;
+    margin-left: -125px;
+    display: none;
+    border-radius: 10px;
+    box-shadow: rgb(66, 63, 63) 2px 2px 2px;
+}
+#calc_close{
+    position: absolute;
+    width: 40px;
+    left: 100%;
+    margin-left: -40px;
+    border-radius: 10px;
+}
+#screen{
+    position: relative;
+    width: 220px;
+    height: 60px;
+    left: 11px;
+    top: 45px;
+    text-align: end;
+    font-size: 20pt;
+    color: gray;
+}
+.buttonnum{
+    position: relative;
+    top: 70px;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+}
+#buttonce{
+    position: relative;
+    top: 70px;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+}
+.buttonr{
+    position: relative;
+    top: 70px;
+    left: 30px;
+    width: 22px;
+    height: 45px;
+}
+.buttonl{
+    position: relative;
+    top: 70px;
+    left: 26px;
+    width: 23px;
+    height: 45px;
+}
+#buttonzero{
+    position: relative;
+    top: 70px;
+    left: 30px;
+    width: 143px;
+    height: 45px;
+}
+#buttonigual{
+    position: relative;
+    top: 70px;
+    left: 30px;
+    height: 45px;
+    width: 45px;
+}

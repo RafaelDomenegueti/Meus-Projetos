@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu SO</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculadora.css">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="calendario.css">
+</head>
+<body>
+
+    <div id="now">
+
+        <div id="horario"></div>
+        <div id="date"></div>
+
+    </div>
+
+
+    <img src="Detalhes/info.png" id="info" onmousemove="oninfo()" onmouseout="offinfo()" onclick="abreinfo()">
+
+    <div id="infopop">
+
+        <img src="Detalhes/white_close.svg.png" id="white-close" onmouseout="offclosepop()" onmousemove="onclosepop()" onclick="fecharpop()">
+            
+        <p id="contpop">
+            <!-- Informações pessoas -->
+        </p>
+
+    </div>
+
+
+    <div id="apps">
+
+        <img src="Icons/game.png" id="icongame" class="icons" onclick="game()" onmousemove="ongame()" onmouseout="offgame()">
+        <img src="Icons/calendario.png" id="iconcalendario" class="icons" onclick="calendario()" onmousemove="oncalendario()" onmouseout="offcalendario()">
+        <img src="Icons/calculadora.png" id="iconcalculadora" class="icons" onclick="calculadora()" onmousemove="oncalculadora()" onmouseout="offcalculadora()">
+
+    </div>
+
+
+    <div id="calculadora">
+
+        <img src="Detalhes/white_close.svg.png" onmousemove="upclosecalc()" onmouseout="offclosecalc()" onclick="calc_close()" id="calc_close">
+
+        <input type="text" id="screen" autocomplete="off">
+
+        <div id="button">
+
+            <input type="button" value="7" class="buttonnum" onclick="button(7)">
+            <input type="button" value="8" class="buttonnum" onclick="button(8)">
+            <input type="button" value="9" class="buttonnum" onclick="button(9)">
+            <input type="button" value="CE" id="buttonce" onclick="ce()"><br>
+            <input type="button" value="4" class="buttonnum" onclick="button(4)">
+            <input type="button" value="5" class="buttonnum" onclick="button(5)">
+            <input type="button" value="6" class="buttonnum" onclick="button(6)">
+            <input type="button" value="+" class="buttonr" onclick="soma()">
+            <input type="button" value="-" class="buttonl" onclick="sub()"><br>
+            <input type="button" value="1" class="buttonnum" onclick="button(1)">
+            <input type="button" value="2" class="buttonnum" onclick="button(2)">
+            <input type="button" value="3" class="buttonnum" onclick="button(3)">
+            <input type="button" value="*" class="buttonr" onclick="mult()">
+            <input type="button" value="/" class="buttonl" onclick="div()"><br>
+            <input type="button" value="0" id="buttonzero" onclick="button(0)">
+            <input type="button" value="=" id="buttonigual" onclick="igual()">
+
+        </div>
+
+    </div>
+
+    
+    <div id="game">
+        
+        <img src="Detalhes/white_close.svg.png" id="closegame" onmousemove="onclosegame()" onmouseout="offclosegame()" onclick="closegame()">
+
+        <div id="arena">
+
+            <div id="point"></div>
+            <div id="player1"></div>
+
+        </div>
+
+        <div id="score">
+
+            <h1 id="scorepoint"></h1>
+
+        </div>
+
+        <input type="button" value="Começar" onclick="começar()" id="começar">
+        <input type="button" value="Parar" onclick="parar()" id="parar">
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="calculadora.js"></script>
+    <script src="game.js"></script>
+    <script src="calendario.js"></script>
+</body>
+</html>

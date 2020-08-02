@@ -1,0 +1,80 @@
+body{
+    background-image: url(Background/Wallpaper.png);
+    background-attachment: fixed;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    position: fixed;
+    animation: onload 1s;
+}
+@keyframes onload {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+/*   Data e Hora   */
+#now{
+    position: fixed;
+    width: 100%;
+    color: white;
+    top: 40%;
+    left: 0px;
+    text-align: center;
+    font-family: cursive;
+}
+#horario{
+    font-size: 60pt;
+}
+
+
+/*  Informações  */
+#info{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    transform: rotate(90deg);
+    left: 100%;
+    top: 5px;
+    margin-left: -50px;
+    padding: 8px;
+    border-radius: 100%;
+}
+#infopop{
+    position: fixed;
+    background-color: #44475a;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    border-radius: 10px;
+    display: none;
+}
+#white-close{
+    position: absolute;
+    width: 30px;
+    left: 100%;
+    margin-left: -30px;
+    border-radius: 10px;
+}
+
+
+/*   Aplicativos   */
+#apps{
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 800px;
+    text-align: center;
+}
+.icons{
+    width: 70px;
+}
