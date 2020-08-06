@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu SO</title>
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="apps.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/apps.css">
 
 </head>
 <body>
@@ -19,11 +19,11 @@
     </div>
 
 
-    <img src="Detalhes/info.png" id="info" onmousemove="oninfo()" onmouseout="offinfo()" onclick="abreinfo()">
+    <img src="images/Detalhes/info.png" id="info" onmousemove="oninfo()" onmouseout="offinfo()" onclick="abreinfo()">
 
     <div id="infopop">
 
-        <img src="Detalhes/white_close.svg.png" id="white-close" onmouseout="offclosepop()" onmousemove="onclosepop()" onclick="fecharpop()">
+        <img src="images/Detalhes/white_close.svg.png" id="white-close" onmouseout="offclosepop()" onmousemove="onclosepop()" onclick="fecharpop()">
             
         <p id="contpop">
             <!-- Informações pessoas -->
@@ -34,16 +34,16 @@
 
     <div id="apps">
 
-        <img src="Icons/game.png" id="icongame" class="icons" onclick="game()" onmousemove="ongame()" onmouseout="offgame()">
-        <img src="Icons/calendario.png" id="iconcalendario" class="icons" onclick="calendario()" onmousemove="oncalendario()" onmouseout="offcalendario()">
-        <img src="Icons/calculadora.png" id="iconcalculadora" class="icons" onclick="calculadora()" onmousemove="oncalculadora()" onmouseout="offcalculadora()">
+        <img src="images/Icon/game.png" id="icongame" class="icons" onclick="game()" onmousemove="ongame()" onmouseout="offgame()">
+        <img src="images/Icon/calendario.png" id="iconcalendario" class="icons" onclick="calendario()" onmousemove="oncalendario()" onmouseout="offcalendario()">
+        <img src="images/Icon/calculadora.png" id="iconcalculadora" class="icons" onclick="calculadora()" onmousemove="oncalculadora()" onmouseout="offcalculadora()">
 
     </div>
 
 
     <div id="calculadora">
 
-        <img src="Detalhes/white_close.svg.png" onmousemove="upclosecalc()" onmouseout="offclosecalc()" onclick="calc_close()" id="calc_close">
+        <img src="images/Detalhes/white_close.svg.png" onmousemove="upclosecalc()" onmouseout="offclosecalc()" onclick="calc_close()" id="calc_close">
 
         <input type="text" id="screen" autocomplete="off">
 
@@ -73,7 +73,7 @@
     
     <div id="game">
         
-        <img src="Detalhes/white_close.svg.png" id="closegame" onmousemove="onclosegame()" onmouseout="offclosegame()" onclick="closegame()">
+        <img src="images/Detalhes/white_close.svg.png" id="closegame" onmousemove="onclosegame()" onmouseout="offclosegame()" onclick="closegame()">
 
         <div id="arena">
 
@@ -94,8 +94,8 @@
     </div>
 
 
-    <script src="script.js"></script>
-    <script src="apps.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/apps.js"></script>
 
 </body>
 </html>
