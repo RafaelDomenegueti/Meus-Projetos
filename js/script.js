@@ -17,9 +17,9 @@ setInterval(function(){
 
 }, 1000)
 
+var agora = new Date
 setInterval(function(){
 
-    let agora = new Date
     var dia = agora.getUTCDate()
     var mes = agora.getUTCMonth()
     var ano = agora.getFullYear()

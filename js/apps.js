@@ -207,3 +207,46 @@ function parar(){
     document.getElementById("scorepoint").innerHTML = ""
 
 }
+
+
+// Calculadora
+
+function calendario(){
+    document.getElementById("calendario").style.display="block"
+}
+function closecalendario(){
+    document.getElementById("calendario").style.display="none"
+}
+function onclosecalendario(){
+    document.getElementById("closecalendario").style.background="#b6bbc2"
+}
+function offclosecalendario(){
+    document.getElementById("closecalendario").style.background=""
+}
+
+// Variavel(agora) foi criada em outro arquivo
+if (agora.getMonth() == 0){
+    document.getElementById("mes").innerHTML="Janeiro"
+} else if (agora.getMonth() == 1){
+    document.getElementById("mes").innerHTML="Fevereiro"
+} else if (agora.getMonth() == 2){
+    document.getElementById("mes").innerHTML="Março"
+} else if (agora.getMonth() == 3){
+    document.getElementById("mes").innerHTML="Abril"
+} else if (agora.getMonth() == 4){
+    document.getElementById("mes").innerHTML="Maio"
+} else if (agora.getMonth() == 5){
+    document.getElementById("mes").innerHTML="Junho"
+} else if (agora.getMonth() == 6){
+    document.getElementById("mes").innerHTML="Julho"
+} else if (agora.getMonth() == 7){
+    document.getElementById("mes").innerHTML="Agosto"
+} else if (agora.getMonth() == 8){
+    document.getElementById("mes").innerHTML="Setembro"
+} else if (agora.getMonth() == 9){
+    document.getElementById("mes").innerHTML="Outubro"
+} else if (agora.getMonth() == 10){
+    document.getElementById("mes").innerHTML="Novembro"
+} else {
+    document.getElementById("mes").innerHTML="Dezembro"
+}
