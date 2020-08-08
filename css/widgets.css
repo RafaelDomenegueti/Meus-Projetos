@@ -1,0 +1,23 @@
+#widgetdol{
+    position: fixed;
+    background-color: #183055;
+    width: 200px;
+    height: 100px;
+    top: 100px;
+    left: 100%;
+    margin-left: -220px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: #1a2029 1px 1px 4px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#dolar{
+    position: absolute;
+    font-size: 15pt;
+    left: 10px;
+}
+#real{
+    position: absolute;
+    top: 25px;
+    left: 10px;
+}
