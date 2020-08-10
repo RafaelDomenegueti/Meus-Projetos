@@ -12,7 +12,7 @@ request.onload = function() {
 
 function dolarpop(p) {
 
-    var dolar = p["USD"]["high"]
+    var dolar = p["USD"]["ask"]
     dolar = Number(dolar).toFixed(2)
     document.getElementById("real").innerHTML= `BRL ${dolar}`
 }
