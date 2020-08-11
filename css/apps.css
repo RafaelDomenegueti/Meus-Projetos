@@ -164,6 +164,7 @@
     left: 50%;
     margin-left: -250px;
     display: none;
+    z-index: 9;
 }
 #closecalendario{
     position: absolute;
