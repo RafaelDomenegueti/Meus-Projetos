@@ -211,12 +211,14 @@ function parar(){
 
 // Calculadora
 var mes = agora.getMonth()
+var dia = agora.getUTCDate()
 
 function calendario(){
     document.getElementById("calendario").style.display="block"
 }
 function closecalendario(){
     document.getElementById("calendario").style.display="none"
+    mes = agora.getMonth()
 }
 function onclosecalendario(){
     document.getElementById("closecalendario").style.background="#b6bbc2"
@@ -225,12 +227,26 @@ function offclosecalendario(){
     document.getElementById("closecalendario").style.background=""
 }
 
+
 function setadireita(){
+    for (let c = 1; c<42; c++){
+        document.getElementById("b"+c).innerHTML=""
+    }
     mes = mes+1
+    if (mes > 11){
+        mes = mes-1
+    }
 }
 function setaesquerda(){
+    for (let c = 1; c<42; c++){
+        document.getElementById("b"+c).innerHTML=""
+    }
     mes = mes-1
+    if (mes < 0){
+        mes = mes+1
+    }
 }
+
 
 setInterval(function(){
 if (mes == 0){
@@ -321,7 +337,7 @@ if (mes == 0){
         dia = dia +1
     }
 
-} else {
+} else if (mes == 11) {
     document.getElementById("mes").innerHTML="Dezembro"
     let dia = 1
     for (var c = 3; c <34; c++){
