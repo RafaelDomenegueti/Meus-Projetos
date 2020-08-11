@@ -210,6 +210,7 @@ function parar(){
 
 
 // Calculadora
+var mes = agora.getMonth()
 
 function calendario(){
     document.getElementById("calendario").style.display="block"
@@ -224,29 +225,107 @@ function offclosecalendario(){
     document.getElementById("closecalendario").style.background=""
 }
 
-// Variavel(agora) foi criada em outro arquivo
-if (agora.getMonth() == 0){
+function setadireita(){
+    mes = mes+1
+}
+function setaesquerda(){
+    mes = mes-1
+}
+
+setInterval(function(){
+if (mes == 0){
     document.getElementById("mes").innerHTML="Janeiro"
-} else if (agora.getMonth() == 1){
+    let dia = 1
+    for (var c = 4; c < 35; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
+} else if (mes == 1){
     document.getElementById("mes").innerHTML="Fevereiro"
-} else if (agora.getMonth() == 2){
+    let dia = 1
+    for (var c = 7; c < 36; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
+} else if (mes == 2){
     document.getElementById("mes").innerHTML="Março"
-} else if (agora.getMonth() == 3){
+    let dia = 1
+    for (var c = 1; c < 32; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
+} else if (mes == 3){
     document.getElementById("mes").innerHTML="Abril"
-} else if (agora.getMonth() == 4){
+    let dia = 1
+    for (var c = 4; c < 34; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
+} else if (mes == 4){
     document.getElementById("mes").innerHTML="Maio"
-} else if (agora.getMonth() == 5){
+    let dia = 1
+    for (var c = 6; c < 37; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
+} else if (mes == 5){
     document.getElementById("mes").innerHTML="Junho"
-} else if (agora.getMonth() == 6){
+    let dia = 1
+    for (var c = 2; c < 32; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
+} else if (mes == 6){
     document.getElementById("mes").innerHTML="Julho"
-} else if (agora.getMonth() == 7){
+    let dia = 1
+    for (var c = 4; c < 35; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
+} else if (mes == 7){
     document.getElementById("mes").innerHTML="Agosto"
-} else if (agora.getMonth() == 8){
+    let dia = 1
+    for (var c = 7; c < 38; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
+} else if (mes == 8){
     document.getElementById("mes").innerHTML="Setembro"
-} else if (agora.getMonth() == 9){
+    let dia = 1
+    for (var c = 3; c <33; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
+} else if (mes == 9){
     document.getElementById("mes").innerHTML="Outubro"
-} else if (agora.getMonth() == 10){
+    let dia = 1
+    for (var c = 5; c <36; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
+} else if (mes == 10){
     document.getElementById("mes").innerHTML="Novembro"
+    let dia = 1
+    for (var c = 1; c <31; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+
 } else {
     document.getElementById("mes").innerHTML="Dezembro"
-}
+    let dia = 1
+    for (var c = 3; c <34; c++){
+        document.getElementById("b"+c).innerHTML=dia
+        dia = dia +1
+    }
+}},100)
