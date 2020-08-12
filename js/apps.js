@@ -6,6 +6,7 @@ function calculadora(){
     
     addEventListener("keydown", function(e){
         if (e.keyCode == 13){
+            screen.value = (screen.value.toString().replace(",", "."));
             screen.value = eval(screen.value)
         }
         if (e.keyCode == 27){
@@ -59,6 +60,7 @@ function div(){
     screen.value = screen.value + "/"
 }
 function igual(){
+    screen.value = (screen.value.toString().replace(",", "."));
     screen.value = eval(screen.value)
 }
 
@@ -209,7 +211,9 @@ function parar(){
 }
 
 
+
 // Calculadora
+
 var mes = agora.getMonth()
 var mesn = agora.getMonth()
 var day = agora.getUTCDate()
