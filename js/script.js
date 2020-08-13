@@ -21,7 +21,7 @@ var agora = new Date
 setInterval(function(){
 
     var dia = agora.getUTCDate()
-    var mes = agora.getUTCMonth()
+    var mes = agora.getUTCMonth() + 1
     var ano = agora.getFullYear()
 
     if (dia < 10){
