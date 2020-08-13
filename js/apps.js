@@ -6,6 +6,7 @@ function calculadora(){
     
     addEventListener("keydown", function(e){
         if (e.keyCode == 13){
+            screen.value = (screen.value.toString().replace(",", "."));
             screen.value = eval(screen.value)
         }
         if (e.keyCode == 27){
@@ -59,6 +60,7 @@ function div(){
     screen.value = screen.value + "/"
 }
 function igual(){
+    screen.value = (screen.value.toString().replace(",", "."));
     screen.value = eval(screen.value)
 }
 
@@ -209,9 +211,12 @@ function parar(){
 }
 
 
+
 // Calculadora
+
 var mes = agora.getMonth()
-var dia = agora.getUTCDate()
+var mesn = agora.getMonth()
+var day = agora.getUTCDate()
 
 function calendario(){
     document.getElementById("calendario").style.display="block"
@@ -236,6 +241,10 @@ function setadireita(){
     if (mes > 11){
         mes = mes-1
     }
+    for (let c = 1; c<42; c++){
+        document.getElementById("b"+c).style.background=""
+    }
+    setas()
 }
 function setaesquerda(){
     for (let c = 1; c<42; c++){
@@ -245,103 +254,157 @@ function setaesquerda(){
     if (mes < 0){
         mes = mes+1
     }
+    for (let c = 1; c<42; c++){
+        document.getElementById("b"+c).style.background=""
+    }
+    setas()
 }
 
 
-setInterval(function(){
-if (mes == 0){
-    document.getElementById("mes").innerHTML="Janeiro"
-    let dia = 1
-    for (var c = 4; c < 35; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
+function setas(){
 
-} else if (mes == 1){
-    document.getElementById("mes").innerHTML="Fevereiro"
-    let dia = 1
-    for (var c = 7; c < 36; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
+    if (mes == 0){
+        document.getElementById("mes").innerHTML="Janeiro"
+        let dia = 1
+        for (var c = 4; c < 35; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 0){
+                document.getElementById("b"+c).style.background="rgb(95, 158, 197)"
+            }
+        }
+    
+    } else if (mes == 1){
+        document.getElementById("mes").innerHTML="Fevereiro"
+        let dia = 1
+        for (var c = 7; c < 36; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 1){
+                document.getElementById("b"+c).style.background="rgb(95, 158, 197)"
+            }
+        }
+    
+    } else if (mes == 2){
+        document.getElementById("mes").innerHTML="Março"
+        let dia = 1
+        for (var c = 1; c < 32; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 2){
+                document.getElementById("b"+c).style.background="rgb(95, 158, 197)"
+            }
+        }
+    
+    } else if (mes == 3){
+        document.getElementById("mes").innerHTML="Abril"
+        let dia = 1
+        for (var c = 4; c < 34; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 3){
+                document.getElementById("b"+c).style.background="rgb(95, 158, 197)"
+            }
+        }
+    
+    } else if (mes == 4){
+        document.getElementById("mes").innerHTML="Maio"
+        let dia = 1
+        for (var c = 6; c < 37; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 4){
+                document.getElementById("b"+c).style.border="1px solid rgb(19, 79, 116)"
+            }
+        }
+    
+    } else if (mes == 5){
+        document.getElementById("mes").innerHTML="Junho"
+        let dia = 1
+        for (var c = 2; c < 32; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 5){
+                document.getElementById("b"+c).style.border="1px solid rgb(19, 79, 116)"
+            }
+        }
+    
+    } else if (mes == 6){
+        document.getElementById("mes").innerHTML="Julho"
+        let dia = 1
+        for (var c = 4; c < 35; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 6){
+                document.getElementById("b"+c).style.border="1px solid rgb(19, 79, 116)"
+            }
+        }
+    
+    } else if (mes == 7){
+        document.getElementById("mes").innerHTML="Agosto"
+        let dia = 1
+        for (var c = 7; c < 38; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 7){
+                document.getElementById("b"+c).style.background="rgb(95, 158, 197)"
+            }
+        }
+        
+    } else if (mes == 8){
+        document.getElementById("mes").innerHTML="Setembro"
+        let dia = 1
+        for (var c = 3; c <33; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 8){
+                document.getElementById("b"+c).style.background="rgb(95, 158, 197)"
+            }
+        }
+        
+    } else if (mes == 9){
+        document.getElementById("mes").innerHTML="Outubro"
+        let dia = 1
+        for (var c = 5; c <36; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 9){
+                document.getElementById("b"+c).style.background="rgb(95, 158, 197)"
+            }
+        }
+    
+    } else if (mes == 10){
+        document.getElementById("mes").innerHTML="Novembro"
+        let dia = 1
+        for (var c = 1; c <31; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 10){
+                document.getElementById("b"+c).style.background="rgb(95, 158, 197)"
+            }
+        }
+    
+    } else if (mes == 11) {
+        document.getElementById("mes").innerHTML="Dezembro"
+        let dia = 1
+        for (var c = 3; c <34; c++){
+            document.getElementById("b"+c).innerHTML=dia
+            dia = dia +1
+            let a = document.getElementById("b"+c).innerHTML
+            if (a == day && mesn == 11){
+                document.getElementById("b"+c).style.background="rgb(95, 158, 197)"
+            }
+        }
     }
-
-} else if (mes == 2){
-    document.getElementById("mes").innerHTML="Março"
-    let dia = 1
-    for (var c = 1; c < 32; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
-
-} else if (mes == 3){
-    document.getElementById("mes").innerHTML="Abril"
-    let dia = 1
-    for (var c = 4; c < 34; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
-
-} else if (mes == 4){
-    document.getElementById("mes").innerHTML="Maio"
-    let dia = 1
-    for (var c = 6; c < 37; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
-
-} else if (mes == 5){
-    document.getElementById("mes").innerHTML="Junho"
-    let dia = 1
-    for (var c = 2; c < 32; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
-
-} else if (mes == 6){
-    document.getElementById("mes").innerHTML="Julho"
-    let dia = 1
-    for (var c = 4; c < 35; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
-
-} else if (mes == 7){
-    document.getElementById("mes").innerHTML="Agosto"
-    let dia = 1
-    for (var c = 7; c < 38; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
-
-} else if (mes == 8){
-    document.getElementById("mes").innerHTML="Setembro"
-    let dia = 1
-    for (var c = 3; c <33; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
-
-} else if (mes == 9){
-    document.getElementById("mes").innerHTML="Outubro"
-    let dia = 1
-    for (var c = 5; c <36; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
-
-} else if (mes == 10){
-    document.getElementById("mes").innerHTML="Novembro"
-    let dia = 1
-    for (var c = 1; c <31; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
-
-} else if (mes == 11) {
-    document.getElementById("mes").innerHTML="Dezembro"
-    let dia = 1
-    for (var c = 3; c <34; c++){
-        document.getElementById("b"+c).innerHTML=dia
-        dia = dia +1
-    }
-}},100)
+}
