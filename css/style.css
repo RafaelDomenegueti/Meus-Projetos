@@ -71,8 +71,7 @@ body{
 #apps{
     position: fixed;
     width: 100%;
-    left: 0px;
-    top: 800px;
+    top: 85%;
     text-align: center;
 }
 .icons{
