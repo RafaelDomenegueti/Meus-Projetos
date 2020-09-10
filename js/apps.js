@@ -110,8 +110,25 @@ function começar(){
     point.style.top = pointtop + "px"
     point.style.left = pointleft + "px"
     
+    document.getElementById("scorepoint").innerHTML = ""
+    document.getElementById("tempo").innerHTML = ""
 
-    document.getElementById("scorepoint").innerHTML = "Pontos: " + pontos
+    var ponto = document.getElementById("scorepoint")
+    ponto.innerHTML = "Pontos: " + pontos
+    var cronometro = document.getElementById("tempo")
+    cronometro.innerHTML = 0
+
+    setInterval(function(){
+
+        if (cronometro.innerHTML < 60){
+            cronometro.innerHTML = Number(cronometro.innerHTML) + 1
+        }
+
+        if (cronometro.innerHTML == 60){
+            parar()
+        }
+
+    }, 1000)
 
     var positionleft = 0
     var positiontop = 0
@@ -206,7 +223,6 @@ function parar(){
     point.style.display="none"
 
     pontos = 0
-    document.getElementById("scorepoint").innerHTML = ""
 
 }
 
